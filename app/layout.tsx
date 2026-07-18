@@ -1,5 +1,6 @@
 import Script from 'next/script'
 import Fab from '@/components/fab/Fab'
+import PixelGate from '@/components/PixelGate'
 import './globals.css'
 
 export const metadata = {
@@ -27,24 +28,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-P3PDGL3J');`,
           }}
         />
-        <Script
-          id="fb-pixel"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '378986818283963');
-fbq('track', 'PageView');`,
-          }}
-        />
+        {/* Meta Pixel moved into PixelGate so it is suppressed on /m/ medical
+            paid-social pages (HIPAA carve-out, H-26). /c/ funnel unaffected. */}
       </head>
       <body>
+        <PixelGate />
         <Fab client="ohio-hair" />
         <noscript>
           <iframe
@@ -52,15 +40,6 @@ fbq('track', 'PageView');`,
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
-          />
-        </noscript>
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=378986818283963&ev=PageView&noscript=1"
-            alt=""
           />
         </noscript>
         {children}

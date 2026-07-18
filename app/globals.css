@@ -34,4 +34,15 @@ button { font-family: inherit; }
   .ohio-footer-row { flex-direction: column !important; gap: 16px !important; text-align: center; }
 
   .ohio-h2 { font-size: 24px !important; }
+
+  /* /m/ paid-social pages */
+  .m-hero-grid  { grid-template-columns: 1fr !important; gap: 28px !important; padding-top: 32px !important; padding-bottom: 40px !important; }
+  .m-hero-grid h1 { font-size: 30px !important; max-width: 100% !important; }
+  .m-trust-grid { grid-template-columns: 1fr 1fr !important; }
+  .m-ba-grid    { grid-template-columns: 1fr !important; gap: 18px !important; }
+  .m-cards-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .m-perm-grid  { grid-template-columns: 1fr !important; gap: 26px !important; }
+  .m-steps-grid { grid-template-columns: 1fr !important; gap: 18px !important; }
+  .m-two-col    { grid-template-columns: 1fr !important; gap: 20px !important; }
+  .m-final-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
 }

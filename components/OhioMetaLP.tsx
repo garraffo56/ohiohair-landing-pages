@@ -97,13 +97,9 @@ export default function OhioMetaLP() {
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <div className="m-ba-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 22 }}>
             {['/img/m/ba1.webp', '/img/m/ba2.webp', '/img/m/ba3.webp'].map(src => (
-              <div key={src}>
-                <img src={src} alt="Actual patient results before and after" style={{ width: '100%', borderRadius: 12, display: 'block' }} />
-                <p style={{ fontWeight: 700, color: INK, fontSize: 14, marginTop: 10 }}>Actual Patient Results</p>
-              </div>
+              <img key={src} src={src} alt="Actual patient results before and after" style={{ width: '100%', borderRadius: 12, display: 'block' }} />
             ))}
           </div>
-          <p style={{ fontSize: 12.5, color: '#8a7a55', marginTop: 16 }}>Individual results vary.</p>
         </div>
       </section>
 
@@ -195,12 +191,9 @@ export default function OhioMetaLP() {
       {/* FINAL CTA + FORM */}
       <section className="m-final-grid ohio-pad" style={{ background: WHITE, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'center', maxWidth: 1080, margin: '0 auto', padding: '64px 48px' }}>
         <div>
-          <h2 className="ohio-h2" style={{ fontFamily: H_FONT, fontWeight: 400, fontSize: 34, color: INK, margin: '0 0 16px', lineHeight: 1.2 }}>
+          <h2 className="ohio-h2" style={{ fontFamily: H_FONT, fontWeight: 400, fontSize: 34, color: INK, margin: '0 0 20px', lineHeight: 1.2 }}>
             If You&rsquo;re Going to Do This, Do It Informed
           </h2>
-          <p style={{ fontSize: 15.5, color: TEXT, margin: '0 0 22px', lineHeight: 1.7 }}>
-            Request your private evaluation with our medical team. No obligation, no pressure&mdash;just a clear, honest picture of your options.
-          </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
             <a href={`tel:${PHONE_TEL}`} style={{ color: INK, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>{PHONE_DISPLAY}</a>
             <a href="mailto:info@ohiohairsolutions.com" style={{ color: INK, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>info@ohiohairsolutions.com</a>

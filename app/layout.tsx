@@ -1,4 +1,5 @@
 import Script from 'next/script'
+import DniSwap from '@/components/DniSwap'
 import GaTag from '@/components/GaTag'
 import Fab from '@/components/fab/Fab'
 import PixelGate from '@/components/PixelGate'
@@ -25,6 +26,7 @@ export default function RootLayout({
           <GaTag />
         <PixelGate />
         <Fab client="ohio-hair" />
+        <DniSwap />
         {children}
       </body>
     </html>

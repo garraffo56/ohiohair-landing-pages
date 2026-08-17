@@ -1,0 +1,29 @@
+/* Consult funnel palette — Ohio Hair Solutions.
+
+   consult.css is shared byte-identical across the fleet and carries RHRLI's
+   tokens in its own #consult block. This file re-declares those tokens for this
+   client and is imported AFTER it.
+
+   The selector is doubled (#consult#consult) on purpose. Same-specificity
+   overrides depend on source order, and a bundler is free to reorder CSS
+   chunks; doubling the id raises specificity so this block wins regardless of
+   the order the two files end up in. That is a deterministic guarantee rather
+   than a convention someone has to remember.
+
+   Only colour tokens are redefined. Layout, spacing, radii and the font stack
+   stay shared, so every client's page is the same page in a different palette
+   — which is the fleet design rule (vary the palette, not the layout). */
+#consult#consult{
+  --ground:#ECE7DC; --panel:#FFFFFF; --field-bg:#FFFFFF;
+  --ink:#1A1A1A; --muted:#6B6250;
+  --rule:#DCD5C6; --rule-strong:#6B6250; --placeholder:#6B6250;
+  --plum:#1A1A1A; --plum-deep:#1A1A1A; --orange:#7D6428; --accent-text:#7D6428;
+  --signal:#A0823F; --signal-hover:#856A2F; --on-signal:#FFFFFF;
+  --ok:#7D6428; --danger:#B3261E; --focus:#7D6428;
+}
+
+/* Text wordmark treatment, used when the client has no logo asset. */
+#consult .wordmark[data-wordmark-text]{
+  display:inline-block; font-size:15px; font-weight:800;
+  letter-spacing:-.02em; line-height:1.1; color:var(--ink);
+}

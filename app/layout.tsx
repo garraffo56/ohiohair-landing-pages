@@ -6,6 +6,11 @@ import PixelGate from '@/components/PixelGate'
 import './globals.css'
 
 export const metadata = {
+  // Without metadataBase, Next resolves relative metadata URLs against
+  // http://localhost:3000 and the deployed pages advertise that to the public
+  // internet. Verified live 2026-08-25: og:image was
+  // http://localhost:3000/images/ohio-logo.png on every /c route.
+  metadataBase: new URL('https://hair.ohiohairsolutions.com'),
   openGraph: {
     images: [{ url: '/images/ohio-logo.png', width: 1016, height: 239, alt: 'Ohio Hair Solutions' }],
   },
